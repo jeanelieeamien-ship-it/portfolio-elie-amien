@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-image: url('https://images.unsplash.com/photo-1497493292307-31c376b6e479');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.55);
+      z-index: -1;
+    }
+    header, footer {
+      text-align: center;
+      background-color: rgba(0,0,0,0.8);
+      padding: 40px 20px;
+    }
+    section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    a {
+      color: #00b4ff;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    form {
+      background-color: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 12px;
+      display: inline-block;
+      text-align: left;
+      width: 90%;
+      max-width: 450px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0 20px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 15px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover { background: #0056b3; }
+       nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 15, 20, 0.45);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      gap: 45px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      letter-spacing: 0.7px;
+      padding: 8px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Ligne bleue animée sous les liens */
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, #00bfff, #007bff);
+      box-shadow: 0 0 8px #00bfff;
+      transition: width 0.4s ease;
+      border-radius: 4px;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Effet glow au survol */
+    nav ul li a:hover {
+      color: #00bfff;
+      text-shadow: 0 0 8px #00bfff;
+    }
+
+    /* Lien actif (page actuelle) */
+    nav ul li a.active {
+      color: #00bfff;
+      text-shadow: 0 0 8px #00bfff;
+    }
+    nav ul li a.active::after {
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 750px) {
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px 0;
+      }
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="etudes.html">Études</a></li>
+      <li><a href="engagements.html">Engagements</a></li>
+      <li><a href="travaux.html">Travaux</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="contacts.html"  class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <header>
+    <h1>Contact</h1>
+  </header>
+
+  <section>
+    <h2>Entrer en contact</h2>
+    <p>N’hésitez pas à me laisser un message ou à me contacter pour toute collaboration.</p>
+    
+    <!-- ===== FORMULAIRE Formspree ===== -->
+    <form action="https://formspree.io/f/mvgwydgj" method="POST"> <!-- Remplace l'URL ici -->
+      <label>Nom :</label>
+      <input type="text" name="Nom" placeholder="Votre nom" required>
+
+      <label>Email :</label>
+      <input type="email" name="Email" placeholder="Votre email" required>
+
+      <label>Message :</label>
+      <textarea name="Message" rows="5" placeholder="Votre message..." required></textarea>
+
+      <!-- Champ caché anti-spam (honeypot) -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <!-- Redirection personnalisée après envoi -->
+      <input type="hidden" name="_next" value="https://tonsite.fr/message-envoye.html">
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <p style="margin-top: 30px;">
+      Vous pouvez aussi me retrouver sur 
+      <a href="https://www.linkedin.com/in/jean-%C3%A9lie-amien-3644bb372/">LinkedIn</a>.
+    </p>
+  </section>
+
+
+</body>
+</html>

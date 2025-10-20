@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Travaux & Projets</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-image: url('https://omdia.tech.informa.com/-/media/tech/omdia/omdia-website-enhancement-oct-2023/ai-coverage-2.jpg?rev=56e6f88de6774db290c5069e65788bd1');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.55);
+      z-index: -1;
+    }
+    header, footer {
+      text-align: center;
+      background-color: rgba(0,0,0,0.8);
+      padding: 40px 20px;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+    h1, h2 { text-align: center; color: #fff; }
+    .projet {
+      margin-bottom: 50px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 30px;
+    }
+    p { line-height: 1.6; }
+    ul { margin-left: 40px; }
+        nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 15, 20, 0.45);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      gap: 45px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      letter-spacing: 0.7px;
+      padding: 8px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Ligne bleue animée sous les liens */
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, #00bfff, #007bff);
+      box-shadow: 0 0 8px #00bfff;
+      transition: width 0.4s ease;
+      border-radius: 4px;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Effet glow au survol */
+    nav ul li a:hover {
+      color: #00bfff;
+      text-shadow: 0 0 8px #00bfff;
+    }
+
+    /* Lien actif (page actuelle) */
+    nav ul li a.active {
+      color: #00bfff;
+      text-shadow: 0 0 8px #00bfff;
+    }
+    nav ul li a.active::after {
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 750px) {
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px 0;
+      }
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="etudes.html">Études</a></li>
+      <li><a href="engagements.html">Engagements</a></li>
+      <li><a href="travaux.html" class="active">Travaux</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+  </nav>
+
+<header>
+  <h1>Travaux & Projets</h1>
+</header>
+
+<section>
+  <div class="projet">
+    <h2>🎮 Game Design Project (C/C++) — ENSIIE (2025)</h2>
+    <p>Développement d’un prototype de jeu de cartes stratégique au sein d’une équipe de 4 personnes, intégrant la conception des mécaniques, l’équilibrage et l’expérience utilisateur.</p>
+    <ul>
+      <li>Implémentation du moteur logique en C et C++</li>
+      <li>Travail collaboratif via GitHub</li>
+      <li>Gestion de projet en méthode agile</li>
+    </ul>
+  </div>
+
+  <div class="projet">
+    <h2>🧮 Java Calculator Application — ENSIIE (2025)</h2>
+    <p>Création d’une calculatrice graphique complète en Java, avec interface utilisateur réactive et parsing d’expressions arithmétiques complexes.</p>
+    <ul>
+      <li>Application des principes de la POO</li>
+      <li>Architecture modulaire et évolutive</li>
+    </ul>
+  </div>
+
+  <div class="projet">
+    <h2>🖼️ Image Processing Project — ENSIIE (2025)</h2>
+    <p>Conception d’un outil d’analyse et de filtrage d’images en C/C++, centré sur la détection d’objets et la performance algorithmique.</p>
+    <ul>
+      <li>Optimisation des algorithmes de traitement</li>
+      <li>Documentation complète et soutenance académique</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Elie AMIEN</p>
+  <p><a href="index.html">Accueil</a> | <a href="etudes.html">Études</a> | <a href="sports.html">Sports</a></p>
+</footer>
+
+</body>
+</html>
